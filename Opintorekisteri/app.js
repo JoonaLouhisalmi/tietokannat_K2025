@@ -16,10 +16,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const opiskelijaRouter = require('./routes/opiskelija');
 const opintojaksoRouter = require('./routes/opintojakso');
 const arviointiRouter = require('./routes/arviointi');
+const userRouter = require('./routes/user');
 
 // USE ROUTES
 app.use('/opiskelija', opiskelijaRouter);
 app.use('/opintojakso', opintojaksoRouter);
 app.use('/arviointi', arviointiRouter);
+app.use('/user', userRouter);
 
 module.exports = app;
